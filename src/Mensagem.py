@@ -54,20 +54,20 @@ def criptografar(texto, deslocamento):
 def descriptografar(texto_criptografado, deslocamento):
     return criptografar(texto_criptografado, -deslocamento)
 
-texto = "Olá, mundo!"
-print(f"Texto original: {texto}")
+# texto = "Olá, mundo!"
+# print(f"Texto original: {texto}")
 
-criptografado = criptografar(texto, 3)
-print(f"Texto criptografado: {criptografado}")
+# criptografado = criptografar(texto, 3)
+# print(f"Texto criptografado: {criptografado}")
 
-seq_binaria = string_to_binario(texto)
-print(f"Sequencia binaria: {seq_binaria}")
+# seq_binaria = string_to_binario(texto)
+# print(f"Sequencia binaria: {seq_binaria}")
 
-sinal_amipseudo = codifica_amipseudo(seq_binaria)
-print(f"Sinal AMI Pseudo: {sinal_amipseudo}")
+# sinal_amipseudo = codifica_amipseudo(seq_binaria)
+# print(f"Sinal AMI Pseudo: {sinal_amipseudo}")
 
-seq_decodificada = decodifica_amipseudo(sinal_amipseudo)
-print(f"Sequencia decodificada: {seq_decodificada}")
+# seq_decodificada = decodifica_amipseudo(sinal_amipseudo)
+# print(f"Sequencia decodificada: {seq_decodificada}")
 
-descriptografado = descriptografar(criptografado, 3)
-print(f"Texto descriptografado: {descriptografado}")
+# descriptografado = descriptografar(criptografado, 3)
+# print(f"Texto descriptografado: {descriptografado}")

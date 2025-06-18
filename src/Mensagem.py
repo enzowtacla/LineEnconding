@@ -1,6 +1,6 @@
-CARACTERES_VALIDOS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚÂÊÔÃÕÇabcdefghijklmnopqrstuvwxyzáéíóúâêôãõç0123456789 .,!?'
+CARACTERES_VALIDOS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚÂÊÔÃÕÇabcdefghijklmnopqrstuvwxyzáéíóúâêôãõç0123456789.,!?'
 
-def string_to_binario(texto):
+def string_para_binario(texto):
 
     seq_binaria = ""
 
@@ -11,6 +11,17 @@ def string_to_binario(texto):
         seq_binaria += binario
 
     return seq_binaria.strip()
+
+def binario_para_string(seq_binaria):
+    texto = ""
+
+    for i in range(0, len(seq_binaria), 8):
+        byte = seq_binaria[i:i+8]
+        if len(byte) == 8:  
+            decimal = int(byte, 2)
+            texto += chr(decimal)
+
+    return texto
 
 
 def codifica_amipseudo(seq_binaria):

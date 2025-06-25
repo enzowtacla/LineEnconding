@@ -27,15 +27,15 @@ def binario_para_string(seq_binaria):
 def codifica_amipseudo(seq_binaria):
 
     sinal_amipseudo = []
-    polaridade_ultimo_um = -1
+    polaridade_ultimo_zero = -1
 
-    for bit in seq_binaria:       #'0' é 0 e '1' alterna entre -V e +V
-        if bit == '0':
+    for bit in seq_binaria:       #'1' é 0 e '0' alterna entre -V e +V
+        if bit == '1':
             sinal_amipseudo.append(0)
-        elif bit == '1':
-            nova_polaridade = -polaridade_ultimo_um
+        elif bit == '0':
+            nova_polaridade = -polaridade_ultimo_zero
             sinal_amipseudo.append(nova_polaridade)
-            polaridade_ultimo_um = nova_polaridade
+            polaridade_ultimo_zero = nova_polaridade
     return sinal_amipseudo
 
 def decodifica_amipseudo(sinal_amipseudo):
